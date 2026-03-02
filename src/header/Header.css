@@ -1,0 +1,25 @@
+header {
+  position: absolute;
+  width: 100%;
+  background: #ffffff99;
+  backdrop-filter: blur(8px);
+  padding: 18px 48px;
+}
+
+.header__wrapper-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.header__wrapper-img {
+  padding: 6px;
+  background: #f25aa6ff;
+  border-radius: 50px;
+}
+
+.header__title {
+  font-size: 23px;
+  line-height: 23px;
+  font-weight: 700;
+  color: #f25aa6ff;
+}
