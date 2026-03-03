@@ -2,7 +2,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  position: fixed;
+  top: 0;
   width: 100%;
   background: #ffffff99;
   backdrop-filter: blur(8px);
@@ -61,5 +62,8 @@ header {
   }
   .header__menu-icon {
     display: none;
+  }
+  .header__title{
+    font-size: 23px;
   }
 }
