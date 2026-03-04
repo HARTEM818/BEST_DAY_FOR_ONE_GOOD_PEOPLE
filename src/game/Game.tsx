@@ -4,10 +4,12 @@ import Arrow from "../img/arrow.svg";
 import GamePad from "../img/game-pad.svg";
 import Trophy from "../img/trophy.svg";
 import Cake from "../img/cake.svg";
+
+import { Link } from "react-router-dom";
 export default function Game() {
   return (
     <>
-      <section className="game">
+      <section id="game" className="game">
         <Container className="game__container">
           <Container>
             <h2 className="game__title">Вибери свою розвагу</h2>
@@ -24,10 +26,10 @@ export default function Game() {
               <Container className="game__list-wrapper">
                 <h3 className="game__list-title">Чи це ти?</h3>
                 <p className="game__list-text">Чи точно це ти Юля чи ні?)</p>
-                <a href="" className="game__list-link">
+                <Link to="/game1" className="game__list-link">
                   Грати зараз
                   <img src={Arrow} alt="" />
-                </a>
+                </Link>
               </Container>
             </li>
             <li className="game__list-item">
@@ -37,10 +39,10 @@ export default function Game() {
               <Container className="game__list-wrapper">
                 <h3 className="game__list-title">Перевірка знань?</h3>
                 <p className="game__list-text">Квіз питання про сімю</p>
-                <a href="" className="game__list-link">
+                <Link to="" className="game__list-link">
                   Грати зараз
                   <img src={Arrow} alt="" />
-                </a>
+                </Link>
               </Container>
             </li>
             <li className="game__list-item">
@@ -50,10 +52,10 @@ export default function Game() {
               <Container className="game__list-wrapper">
                 <h3 className="game__list-title">Отримання</h3>
                 <p className="game__list-text">Ти дізнаєшся те що хотіла!</p>
-                <a href="" className="game__list-link">
+                <Link to="" className="game__list-link">
                   Грати зараз
                   <img src={Arrow} alt="" />
-                </a>
+                </Link>
               </Container>
             </li>
           </ul>

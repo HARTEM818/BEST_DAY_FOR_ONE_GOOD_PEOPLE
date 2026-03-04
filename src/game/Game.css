@@ -1,7 +1,10 @@
+.game {
+  margin-top: 90px;
+}
+
 .game__container {
   max-width: 302px;
   margin: 0 auto;
-  margin-top: 80px;
 }
 
 .game__title {
@@ -56,6 +59,9 @@
 }
 
 @media (min-width: 1440px) {
+  .game{
+    margin-top: 149px;
+  }
   .game__container {
     max-width: 1184px;
   }
@@ -99,6 +105,6 @@
     box-shadow:
       0px 2px 4px #00000012,
       0px 0px 0px #171a1f00;
-      padding: 12px;
+    padding: 12px;
   }
 }

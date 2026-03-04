@@ -1,16 +1,19 @@
 import "./App.css";
-import Header from "../header/Header";
-import Hero from "../hero/Hero";
-import Game from "../game/Game";
+
+
+import { Route, Routes } from "react-router-dom";
+import Game1 from "../pages/Game1";
+import Home from "../pages/Home";
 export default function App() {
   return (
     <>
-      <Header />
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/game1" element={<Game1/>}/>
 
-      <main>
-        <Hero />
-        <Game/>
-      </main>
+    </Routes>
+      
+    
     </>
   );
 }

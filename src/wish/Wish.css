@@ -1,0 +1,96 @@
+.wish {
+  margin-top: 74px;
+}
+
+.wish__container {
+  max-width: 302px;
+  margin: 0 auto;
+}
+.wish__wrapper-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #16181dff;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #343841ff;
+  }
+}
+.wish__list {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wish__list-item {
+  position: relative;
+  background: #f9fafbff;
+  border-radius: 14px;
+  border: 1px solid #e0e2e680;
+  padding: 32px;
+  h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #16181dff;
+    margin-top: 24px;
+  }
+  p{
+    font-size: 12px;
+    
+  }
+}
+
+.wish__list-item::before {
+  content: url("../img/lucide-Heart-Outlined.svg");
+  position: absolute;
+  top: -7px;
+  left: 285px;
+  opacity: 0.4;
+}
+
+@media (min-width: 1440px) {
+  .wish {
+    margin-top: 148px;
+  }
+
+  .wish__container {
+    max-width: 1150px;
+  }
+  .wish__wrapper-title {
+    gap: 16px;
+    h2 {
+      font-size: 36px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .wish__list {
+    margin-top: 64px;
+    flex-direction: row;
+    gap: 32px;
+  }
+  .wish__list-item {
+    flex: 1;
+    h3 {
+      margin-top: 30px;
+    }
+    p{
+        font-size: 16px;
+    }
+  }
+  .wish__list-item::before {
+    content: url("../img/lucide-Heart-Outlined.svg");
+
+
+    left: 345px;
+
+  }
+}
