@@ -14,8 +14,8 @@ export default function Game() {
           <Container>
             <h2 className="game__title">Вибери свою розвагу</h2>
             <p className="game__text">
-              Я створив ці ігри спеціально для тебе. В кінці після всіх ігор ти
-              отримаєш відкриття того хто ти в цьому році!
+              Я створив ці ігри спеціально для тебе. В кінці після двог
+              ігор-тестів ти отримаєш відкриття того хто ти в цьому році!
             </p>
           </Container>
           <ul className="game__list">
@@ -39,7 +39,7 @@ export default function Game() {
               <Container className="game__list-wrapper">
                 <h3 className="game__list-title">Перевірка знань?</h3>
                 <p className="game__list-text">Квіз питання про сімю</p>
-                <Link to="" className="game__list-link">
+                <Link to="/game2" className="game__list-link">
                   Грати зараз
                   <img src={Arrow} alt="" />
                 </Link>
@@ -52,7 +52,10 @@ export default function Game() {
               <Container className="game__list-wrapper">
                 <h3 className="game__list-title">Отримання</h3>
                 <p className="game__list-text">Ти дізнаєшся те що хотіла!</p>
-                <Link to="" className="game__list-link">
+                <Link
+                  to=""
+                  className={`game__list-link ${localStorage.getItem("first") === "true" && localStorage.getItem("second") === "true" ? "" : "disabled-link"} `}
+                >
                   Грати зараз
                   <img src={Arrow} alt="" />
                 </Link>

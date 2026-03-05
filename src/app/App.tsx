@@ -3,6 +3,7 @@ import Layout from "../layout/Layout";
 
 import { Route, Routes } from "react-router-dom";
 import Game1 from "../pages/game1/Game1";
+import Game2 from "../pages/game2/Game2";
 import Home from "../pages/Home";
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />}/>
           <Route path="/game1" element={<Game1 />} />
+          <Route path="/game2" element={<Game2 />} />
         </Route>
       </Routes>
     </>

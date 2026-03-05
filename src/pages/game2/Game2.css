@@ -1,0 +1,84 @@
+.game2__container {
+  max-width: 302px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.game2-wrapper__title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.game2-wrapper__btn {
+  margin-top: 50px;
+  display: flex;
+  gap: 10px;
+}
+
+.game2__btn {
+  padding: 10px 20px;
+  border: 1px solid #f25aa6ff;
+  border-radius: 10px;
+  background-color: #f25aa6ff;
+  color: #ffff;
+}
+.game2__start {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid #f25aa6ff;
+  border-radius: 10px;
+  background-color: #f25aa6ff;
+  color: #ffff;
+}
+.game2__btn:nth-of-type(1) {
+  animation: 2s first-btn forwards;
+}
+.game2__btn:nth-of-type(2) {
+  animation: 2s second-btn forwards;
+}
+.game2__btn:nth-of-type(3) {
+  animation: 2s third-btn forwards;
+}
+@keyframes first-btn {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(180px);
+  }
+  75% {
+    transform: translate(80px);
+  }
+  100% {
+    transform: translate(180px);
+  }
+}
+@keyframes second-btn {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(80px);
+  }
+  75% {
+    transform: translate(-100px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes third-btn {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(-180px);
+  }
+  75% {
+    transform: translate(40px);
+  }
+  100% {
+    transform: translate(-180px);
+  }
+}

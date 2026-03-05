@@ -63,7 +63,11 @@
   font-size: 14px;
   font-weight: 600;
 }
-
+.disabled-link{
+  pointer-events: none;
+  color: grey;
+   cursor: default;
+}
 @media (min-width: 1440px) {
   .game{
     margin-top: 149px;

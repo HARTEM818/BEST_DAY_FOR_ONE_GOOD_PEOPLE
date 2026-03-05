@@ -9,13 +9,14 @@ export default function Game1() {
     grandmaName: "",
     buttonName: "",
   });
-  const [isClicked, setClicked] = useState(false);
+  const [isClicked, setClicked] = useState("");
   return (
     <>
       <form
         className="game1-form"
         onSubmit={(e) => {
           e.preventDefault();
+          localStorage.setItem("first", "true")
           navigate("/", { replace: true });
         }}
       >
@@ -68,15 +69,15 @@ export default function Game1() {
           </p>
           <Container className="game1-form__wrapper-button">
             <button
-              style={{
-                backgroundColor: isClicked ? "grey" : "",
-              }}
               onClick={() => {
-                setClicked(true);
+                setClicked("Королева");
                 setForm({
                   ...form,
                   buttonName: "Королева",
                 });
+              }}
+              style={{
+                backgroundColor: isClicked === "Королева" ? "#f25aa6ff" : "",
               }}
               type="button"
               className="game1-form__button"
@@ -95,15 +96,15 @@ export default function Game1() {
             </button>
 
             <button
-              style={{
-                backgroundColor: isClicked ? "grey" : "",
-              }}
               onClick={() => {
-                setClicked(true);
+                setClicked("Гарнюня");
                 setForm({
                   ...form,
                   buttonName: "Гарнюня",
                 });
+              }}
+              style={{
+                backgroundColor: isClicked === "Гарнюня" ? "#f25aa6ff" : "",
               }}
               type="button"
               className="game1-form__button"
@@ -112,8 +113,8 @@ export default function Game1() {
             </button>
           </Container>
         </Container>
-        <button type="submit" className="game1-form__submit">
-          Натисни якщо все
+        <button type="submit" className={`game1-form__submit ${isClicked === "Гарнюня" || isClicked === "Королева" ? "" : "disabled-btn"} `}>
+          Натисни коли все вибереш
         </button>
       </form>
     </>

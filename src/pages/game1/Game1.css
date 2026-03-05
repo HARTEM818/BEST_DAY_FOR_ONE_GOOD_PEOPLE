@@ -38,3 +38,8 @@
     background-color: transparent;
     align-self: start;
 }
+.disabled-btn{
+  pointer-events: none;
+  color: grey;
+  cursor: default;
+}
