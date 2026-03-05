@@ -1,0 +1,40 @@
+.game1-form {
+  margin: 0 auto;
+  margin-top: 100px;
+  max-width: 302px;
+  display: flex;
+  flex-direction: column;
+    gap: 30px;
+}
+
+.game1-form__field {
+  padding: 10px;
+  border: 1px solid #f25aa6ff;
+  border-radius: 10px;
+}
+.game1-form__text {
+  margin-bottom: 15px;
+}
+.game1-form__input {
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid #f25aa6ff;
+}
+
+.game1-form__wrapper-button {
+    display: flex;
+    gap: 20px;
+}
+.game1-form__button{
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #f25aa6ff;
+    background-color: transparent;
+}
+.game1-form__submit{
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #f25aa6ff;
+    background-color: transparent;
+    align-self: start;
+}
