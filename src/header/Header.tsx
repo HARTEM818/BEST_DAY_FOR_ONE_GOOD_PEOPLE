@@ -3,8 +3,8 @@ import giftIcon from "../img/lucide-Gift-Outlined.svg";
 import giftMenu from "../img/lucide-Menu-Outlined.svg";
 import "./Header.css";
 import { useState } from "react";
+import { HashLink } from 'react-router-hash-link';
 import { Link } from "react-router-dom";
-
 export default function Header() {
   const [isMenu, setMenu] = useState(false);
 
@@ -32,10 +32,10 @@ export default function Header() {
       <nav className={`header__nav ${isMenu ? "active" : ""}`}>
         <ul className="header__list">
           <li>
-            <a href="/#game">Обовязвокі Квести</a>
+            <HashLink to="/#game">Обовязвокі Квести</HashLink>
           </li>
           <li>
-            <a href="/#wish">Побажання від рідних</a>
+            <HashLink to="/#wish">Побажання від рідних</HashLink>
           </li>
         </ul>
       </nav>

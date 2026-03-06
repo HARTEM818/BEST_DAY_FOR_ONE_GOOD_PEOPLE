@@ -1,6 +1,7 @@
 import "./Hero.css";
 import Container from "../hoc/Container";
 import blocksImg from "../img/hero-blocks.webp";
+import { HashLink } from 'react-router-hash-link';
 export default function Hero() {
   return (
     <>
@@ -16,7 +17,7 @@ export default function Hero() {
 
 
             <button className="hero__start-btn">
-              <a href="#game">Розпочати Гру</a>
+              <HashLink to="#game">Розпочати Гру</HashLink>
             </button>
           </Container>
           <img className="hero__main-img" src={blocksImg} alt="" />
