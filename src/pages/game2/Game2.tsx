@@ -1,16 +1,15 @@
 import Container from "../../hoc/Container";
 import "./Game2.css";
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 export default function Game2() {
   const [start, setStart] = useState(false);
   const [selected, setSelected] = useState<number | null>(null);
   const [shuffle, setShuffle] = useState(false);
   const [guessPhase, setGuessPhase] = useState(false);
-  const [flipCorrect, setFlipCorrect] = useState(false); // новий стан
-
+  const [flipCorrect, setFlipCorrect] = useState(false);
+  const [winCount, setWinCount] = useState(0);
   const handleClick = (index: number) => {
-    
     if (selected === null) {
       setSelected(index);
       setShuffle(true);
@@ -22,15 +21,33 @@ export default function Game2() {
       return;
     }
 
-  
     if (guessPhase) {
       if (index === selected) {
-        setFlipCorrect(true); 
+        setFlipCorrect(true);
         alert("Правильно 🎉");
+        setStart(false);
+        setSelected(null);
+        setShuffle(false);
+        setGuessPhase(false);
+        setFlipCorrect(false);
+        setWinCount((prev) => {
+          const newCount = prev + 1;
+
+          if (newCount === 3) {
+            localStorage.setItem("second", "true");
+          }
+
+          return newCount;
+        });
       } else {
-        location.reload();
         alert("Неправильно 😅");
+        setStart(false);
+        setSelected(null);
+        setShuffle(false);
+        setGuessPhase(false);
+        setFlipCorrect(false);
       }
+
     }
   };
 
@@ -42,7 +59,8 @@ export default function Game2() {
         </h2>
 
         <p className="game2__text-description">
-          Суть гри — відслідкувати вибрану кнопку
+          Суть гри — відслідкувати вибрану кнопку і вибрати її 3 рази підряд
+          тоді ти зможеш дізнатися дещо цікаве
         </p>
       </Container>
 
@@ -50,9 +68,15 @@ export default function Game2() {
         почати
       </button>
 
-      {start && selected === null && <p className="game2__start-text">Вибери кнопку</p>}
-      {start && selected !== null && !guessPhase && <p className="game2__start-text">Слідкуй за кнопкою</p>}
-      {guessPhase && <p className="game2__start-text">Тепер знайди свою кнопку</p>}
+      {start && selected === null && (
+        <p className="game2__start-text">Вибери кнопку</p>
+      )}
+      {start && selected !== null && !guessPhase && (
+        <p className="game2__start-text">Слідкуй за кнопкою</p>
+      )}
+      {guessPhase && (
+        <p className="game2__start-text">Тепер знайди свою кнопку</p>
+      )}
 
       <Container className="game2-wrapper__btn">
         <button
@@ -82,6 +106,12 @@ export default function Game2() {
           Свято
         </button>
       </Container>
+      <p>Кількість виграшів: {winCount}</p>
+      {winCount === 3 && (
+        <Link className="game2__final-link" to="/">
+          Молодець натискай на мене і переходь на фінал!
+        </Link>
+      )}
     </Container>
   );
 }

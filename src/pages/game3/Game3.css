@@ -1,0 +1,93 @@
+.game3 {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0f0f1a, #1b1b35);
+  box-sizing: border-box;
+}
+
+.game3__start {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #ff4da6;
+  color: white;
+}
+
+.queen {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.queen__letter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff6ec7;
+  text-shadow:
+    0 0 8px #ff6ec7,
+    0 0 16px #ff6ec7;
+  animation: finalPulse 2s ease 4s infinite;
+  animation-delay: calc(var(--i) * 0.08s);
+}
+
+.space {
+  opacity: 0;
+}
+
+@keyframes finalPulse {
+  0%,
+  100% {
+    transform: translate(calc(-50% + (var(--i) - var(--length) / 2) * 14px), 0)
+      scale(1.2);
+  }
+  50% {
+    transform: translate(calc(-50% + (var(--i) - var(--length) / 2) * 14px), 0)
+      scale(1.4);
+    color: gold;
+    text-shadow:
+      0 0 30px gold,
+      0 0 50px gold,
+      0 0 70px gold;
+  }
+}
+
+@media (min-width: 1440px) {
+  .queen {
+    height: 400px;
+  }
+  .queen__letter {
+    font-size: 64px; 
+  }
+  @keyframes finalPulse {
+    0%,
+    100% {
+      transform: translate(
+          calc(-50% + (var(--i) - var(--length) / 2) * 40px),
+          0
+        )
+        scale(1.2);
+    }
+    50% {
+      transform: translate(
+          calc(-50% + (var(--i) - var(--length) / 2) * 40px),
+          0
+        )
+        scale(1.4);
+      color: gold;
+      text-shadow:
+        0 0 30px gold,
+        0 0 50px gold,
+        0 0 70px gold;
+    }
+  }
+}

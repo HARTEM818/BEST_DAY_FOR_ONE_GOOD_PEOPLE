@@ -53,7 +53,7 @@ export default function Game() {
                 <h3 className="game__list-title">Отримання</h3>
                 <p className="game__list-text">Ти дізнаєшся те що хотіла!</p>
                 <Link
-                  to=""
+                  to="/game3"
                   className={`game__list-link ${localStorage.getItem("first") === "true" && localStorage.getItem("second") === "true" ? "" : "disabled-link"} `}
                 >
                   Грати зараз

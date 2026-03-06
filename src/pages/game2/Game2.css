@@ -33,10 +33,10 @@
   color: #ffff;
   cursor: pointer;
 }
-.game2__start-text{
+.game2__start-text {
   position: fixed;
 }
-.game2__start-text.disable{
+.game2__start-text.disable {
   display: none;
 }
 .animation-first {
@@ -50,6 +50,15 @@
 }
 .flip-up {
   animation: flipUp 0.6s forwards;
+}
+.game2__final-link {
+  display: inline-block;
+  margin-top: 20px;
+  transition: color 0.5s ;
+}
+.game2__final-link:hover{
+  color: #f25aa6ff;
+
 }
 
 @keyframes first-btn {
